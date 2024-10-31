@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Script from 'next/script';
+
 
 import "./globals.css";
 
@@ -23,6 +25,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/styles.css" />
         <script src="/scripts.js"></script>
         <link rel="icon" type="image/jpg" href="/imgs/favicon.jpg" />
+        <Script src="/scripts.js" strategy="lazyOnload" />
       </head>
       <body>
         {children}
