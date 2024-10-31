@@ -1,8 +1,9 @@
 "use client";
 
-
 import React from 'react';
 import {useState} from "react";
+
+
 
 export default function Home() {
 
@@ -25,7 +26,7 @@ export default function Home() {
 
   const submitForm = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    let newMessages = [...messages, {role: 'user', content: 
+    const newMessages = [...messages, {role: 'user', content: 
     messageInput}]
     setMessages(newMessages);
     setMessageInput('');
