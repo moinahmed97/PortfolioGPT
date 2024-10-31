@@ -23,9 +23,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="/styles.css" />
-        <script src="/scripts.js"></script>
+        <Script src="/scripts.js" strategy="lazyOnload"/>
         <link rel="icon" type="image/jpg" href="/imgs/favicon.jpg" />
-        <Script src="/scripts.js" strategy="lazyOnload" />
+      
       </head>
       <body>
         {children}
