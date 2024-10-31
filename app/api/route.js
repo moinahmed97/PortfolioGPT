@@ -75,7 +75,7 @@ const DATA_RESUME = {
     graduationDate: "August 2024"
   },
   skills: [
-    "Python", "Angular", "React", "TypeScript", "jQuery", "JavaScript", "C#", "C++", "Java", "HTML/CSS",
+    "Python", "Angular", "React", "TypeScript", "jQuery", "JavaScript", "C#", "C++", "Java", "HTML/CSS","Azure",
     "AI", "Machine Learning", "Excel", "Postman", "Jasmine", "Pytest", "SQL", "Cherwell", "Microsoft Configuration Manager",
     "Duo", "compliance", "GAM", "G Suite", "Automox", "Rapid7", "CrowdStrike", "Jamf", "AV setup", "IT tickets",
     "Active Directory", "Linux", "Jira", "GitHub", "Git Commands", "Version Control Systems", "SRS Documentation", "Design Documentation"
