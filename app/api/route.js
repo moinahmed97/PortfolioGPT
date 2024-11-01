@@ -8,7 +8,6 @@ const deployment = process.env.AZURE_OPENAI_MODEL;
 
 
 
-const client = new AzureOpenAI({ endpoint, apiKey, apiVersion, deployment });
 
 
 
