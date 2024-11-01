@@ -7,9 +7,10 @@ const apiVersion = '2024-05-01-preview';
 const deployment = process.env.AZURE_OPENAI_MODEL;
 
 
-const { Configuration, OpenAIApi } = require("openai");
+
 const configuration = new Configuration({
-  apiKey: endpoint,
+  apiKey: apiKey,
+  basePath: `${endpoint}/openai/deployments/${deployment}`,
 });
 const openai = new OpenAIApi(configuration);
 
