@@ -8,11 +8,9 @@ const deployment = process.env.AZURE_OPENAI_MODEL;
 
 
 
-const configuration = new Configuration({
-  apiKey: apiKey,
-  basePath: `${endpoint}/openai/deployments/${deployment}`,
-});
-const openai = new OpenAIApi(configuration);
+const client = new AzureOpenAI({ endpoint, apiKey, apiVersion, deployment });
+
+
 
 const DATA_RESUME = {
   experience: [
