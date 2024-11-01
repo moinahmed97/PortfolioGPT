@@ -59,7 +59,7 @@ export default function Home() {
           <ul id="menu" className={menuOpen ? "active" :""}>
             <li><a href="#">Home</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="https://github.com/moinahmed97">Projects</a></li>
             <li>
               <a href="mailto:moinn5810@gmail.com" className="button">
                 Contact Me
