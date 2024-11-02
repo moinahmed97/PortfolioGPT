@@ -57,7 +57,7 @@ export default function Home() {
         </a>
         <nav>
           <ul id="menu" className={menuOpen ? "active" :""}>
-            <li><a href="#">Home</a></li>
+            <li><a href="#chatbot">Chatbot</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="https://github.com/moinahmed97">Projects</a></li>
             <li>
@@ -194,7 +194,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="chatbot container">
+        <section id="chatbot" className="chatbot container">
           <h2>
             <small>Talk to me</small> Chatbot
           </h2>
