@@ -1,4 +1,4 @@
-*, *::before, *::after {
+*, *::before, *::after, body {
   box-sizing: border-box;
   margin:0;
   padding: 0;
@@ -34,7 +34,7 @@ body {
   font-optical-sizing: auto;
   font-size: 20px;
   font-style: normal;
-  padding-bottom: 1000px;
+  padding-bottom: 50;
 }
 
 
