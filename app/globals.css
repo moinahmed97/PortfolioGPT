@@ -427,6 +427,7 @@ h3{
               display: flex;
               margin-top: 15px;
               gap:15px;
+              flex-wrap: wrap;
               input{
                   border-radius: 10px;
                   flex:1;
