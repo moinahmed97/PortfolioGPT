@@ -53,6 +53,23 @@ const DATA_RESUME = {
         "Built a responsive portfolio site with Next.js, boosting project visibility and user engagement by 50%.",
         "Integrated an Azure/OpenAI-powered chatbot for real-time responses to resume inquiries, reducing reply times by 90%."
       ]
+    },
+    {
+      name: "Customized Vehicle Infotainment System",
+      technologies: ["ReactJS", "HTML/CSS"],
+      features: [
+        "Integrated Jest for unit testing, achieving 99% code coverage and reducing production bugs by 20%.",
+        "Implemented MVC architecture to enhance scalability and maintainability.",
+        "Applied OOP principles to improve code clarity, maintainability, and scalability."
+      ]
+    },
+    {
+      name: "3D Lidar Detection for Wayne Robotics",
+      technologies: ["Python", "ROS", "Ubuntu"],
+      features: [
+        "Developed the foundational codebase for the 3D Lidar Detection system, enabling accurate environmental mapping for Wayne State Robotics.",
+        "Collaborated with multidisciplinary teams to ensure seamless integration and functionality across the project."
+      ]
     }
   ],
   education: {
@@ -63,42 +80,59 @@ const DATA_RESUME = {
   },
   skills: {
     programmingLanguages: [
-      "Python", "Java", "C/C++/C#", "AngularJS", "NoSQL",
-      "React.js", "Node.js", "TypeScript", "JavaScript", "HTML/CSS"
+      "Python",
+      "Java",
+      "C/C++/C#",
+      "AngularJS",
+      "NoSQL",
+      "React.js",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "HTML/CSS"
     ],
-    frameworks: ["AngularJS", "React.js", "Node.js", "Next.js"],
+    frameworks: [
+      "AngularJS",
+      "React.js",
+      "Node.js",
+      "Next.js"
+    ],
     toolsAndTechnologies: [
-      "Ubuntu", "DevOps", "CI/CD", "Git", "JIRA",
-      "Visual Studio", "Cherwell Systems", "Greenware"
+      "Ubuntu",
+      "DevOps",
+      "CI/CD",
+      "Git",
+      "JIRA",
+      "Visual Studio",
+      "Cherwell Systems",
+      "Greenware"
     ],
     otherSkills: [
-      "Agile Methodologies", "REST APIs", "Information Security",
-      "Computer Networking", "Office 365"
+      "Agile Methodologies",
+      "REST APIs",
+      "Information Security",
+      "Computer Networking",
+      "Office 365"
     ]
   }
 };
 
 export async function POST(req) {
   const { messages } = await req.json();
-  const client = new AzureOpenAI({ endpoint, apiKey });
+  const client = new AzureOpenAI({ endpoint, apiKey, apiVersion, deployment });
 
-  // Add system instruction with resume data
+  // Prepend system instruction with updated resume data
   messages.unshift({
     role: 'system',
     content: `You are MoinPortfolioGPT, answering only questions based on the resume provided. Resume: ${JSON.stringify(DATA_RESUME)}`
   });
 
-  try {
-    const response = await client.chat.completions.create({
-      model: deployment, // Pass the deployment/model name
-      messages,
-      max_tokens: 128,
-      temperature: 0.7 // Controls creativity of the response
-    });
+  const response = await client.chat.completions.create({
+    messages,
+    max_tokens: 128
+  });
 
-    return NextResponse.json({ message: response.choices[0].message.content });
-  } catch (error) {
-    console.error("Azure OpenAI API error:", error);
-    return NextResponse.json({ error: "Failed to generate response" }, { status: 500 });
-  }
+  return NextResponse.json({
+    message: response.choices[0].message.content
+  });
 }
