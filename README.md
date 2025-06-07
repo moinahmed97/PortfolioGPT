@@ -80,9 +80,3 @@ moin-syed-portfolio/
 ## License
 This project is for personal use and demonstration. Contact Moin Syed for permissions regarding reuse or distribution.
 
-## Contact
-- **Name**: Moin Syed
-- **Email**: [Your email address]
-- **GitHub**: [Your GitHub profile URL]
-- **Portfolio**: Open `index.html` or host the site to view live.
-
