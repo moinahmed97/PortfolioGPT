@@ -1,36 +1,88 @@
-This is a my portfolio [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Moin Syed Portfolio Website
 
-First, run the development server:
+## Overview
+This project is a personal portfolio website for Moin Syed, a Computer Science graduate from Wayne State University. It showcases skills, work experience, projects, and includes an interactive Azure AI chatbot for visitors to learn more about Moin's background and resume. The site is designed to be responsive, visually appealing, and user-friendly, highlighting expertise in software engineering, IT automation, and full-stack development.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+- **Navigation**: Responsive header with a mobile-friendly toggle menu.
+- **Hero Section**: Introduces Moin Syed with a brief bio, call-to-action buttons (View Resume, Contact Me), and a visual element.
+- **Skills Section**: Displays front-end (HTML, CSS, JavaScript, React, jQuery, Angular) and back-end (Node.js, Python, C++, C#, ASP.NET, SQL) skills.
+- **Projects**: Highlights key projects like a Parking Detection Web App, Customized Vehicle Infotainment System, and a Point-&-Click Zombie Killer Game.
+- **Chatbot**: An Azure AI chatbot allows users to interact and ask questions about Moin's skills, experience, and resume.
+- **Resume**: Downloadable resume in PDF format with detailed experience, projects, education, and skills.
+
+## Tech Stack
+- **HTML**: Structure of the website.
+- **CSS**: Styling with custom variables, responsive design, and media queries for mobile and tablet views.
+- **JavaScript**: Handles mobile menu toggle functionality.
+- **Frameworks & Tools**:
+  - Roboto Condensed font for typography.
+  - Tailwind CSS (used in projects) for responsive UI.
+  - Git and GitHub for version control.
+- **Assets**:
+  - `index.html`: Main webpage structure.
+  - `styles.css`: Custom CSS for styling and responsiveness.
+  - `scripts.js`: JavaScript for interactive features.
+  - `MoinSyedResume.pdf`: Resume document for download.
+
+## Installation
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/moin-syed-portfolio.git
+   ```
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd moin-syed-portfolio
+   ```
+3. **Open the Website**:
+   - Open `index.html` in a web browser to view the portfolio locally.
+   - No additional dependencies or build steps are required.
+
+## Usage
+- **Navigation**: Click the menu items (Home, Skills, Projects, Contact Me) to explore sections. On mobile, use the toggle button to show/hide the menu.
+- **Hero Section**: Read the bio and use "View Resume" or "Contact Me" buttons to engage.
+- **Skills**: Review front-end and back-end skills displayed in a clean, categorized layout.
+- **Chatbot**: Interact with the Azure AI chatbot to ask about Moin's experience, skills, or resume.
+- **Resume**: Download the `MoinSyedResume.pdf` to view detailed professional background.
+
+## Project Structure
+```
+moin-syed-portfolio/
+├── index.html          # Main HTML file for the portfolio
+├── styles.css          # CSS styles for layout, colors, and responsiveness
+├── scripts.js          # JavaScript for mobile menu toggle
+├── MoinSyedResume.pdf  # Downloadable resume PDF
+└── README.md           # This file
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Styling
+- **Color Scheme**:
+  - Base: #555, #f1f1f1, #000
+  - Yellow: #ffda4b, #fffbe6, #8b6f00
+  - Blue: #0a61ae, #e2f8ff, #61dafb, #0a81ae
+- **Typography**: Uses "Roboto Condensed" font for a modern, clean look.
+- **Responsiveness**: Media queries ensure the site adapts to screens from mobile (768px) to desktop (1440px).
+- **Animations**: Marquee effect for logos and smooth transitions for buttons.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Notes
+- The chatbot functionality requires an active Azure AI service connection (not included in this repo).
+- Ensure the `MoinSyedResume.pdf` file is present in the root directory for the download link to work.
+- Test the site on multiple devices to verify responsiveness and cross-browser compatibility.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contributing
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make changes and commit (`git commit -m "Add feature"`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request for review.
 
-## Learn More
+## License
+This project is for personal use and demonstration. Contact Moin Syed for permissions regarding reuse or distribution.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
+- **Name**: Moin Syed
+- **Email**: [Your email address]
+- **GitHub**: [Your GitHub profile URL]
+- **Portfolio**: Open `index.html` or host the site to view live.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
