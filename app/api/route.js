@@ -7,6 +7,7 @@ const apiVersion = '2024-05-01-preview';
 const deployment = process.env.AZURE_OPENAI_MODEL;
 
 const DATA_RESUME = {
+  
   "experience": [
     {
       "role": "Web Developer",
@@ -134,7 +135,12 @@ const DATA_RESUME = {
       "Office 365",
       "UI/UX Design"
     ]
-  }
+  },
+  "funFacts": [
+    "Hiked two mountains in the Smokey Mountains in a single day, showcasing endurance and love for adventure.",
+    "Avid Detroit Lions fan, believing this is their year to shine!"
+  ]
+
 };
 
 export async function POST(req) {
